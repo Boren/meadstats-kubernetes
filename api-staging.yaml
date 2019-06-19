@@ -65,23 +65,23 @@ spec:
             value: "app.config.ProductionConfig"
           - name: DATABASE_URL
             valueFrom:
-            secretKeyRef:
-              name: db-prod
-              key: connectionString
+              secretKeyRef:
+                name: db-prod
+                key: connectionString
           - name: JWT_SECRET
             valueFrom:
-            secretKeyRef:
-              name: jwt
-              key: secret
+              secretKeyRef:
+                name: jwt
+                key: secret
           - name: CLIENT_ID
             valueFrom:
-            secretKeyRef:
-              name: untappd-api
-              key: id
+              secretKeyRef:
+                name: untappd-api
+                key: id
           - name: CLIENT_SECRET
             valueFrom:
-            secretKeyRef:
-              name: untappd-api
-              key: secret
+              secretKeyRef:
+                name: untappd-api
+                key: secret
       imagePullSecrets:
       - name: regcred
