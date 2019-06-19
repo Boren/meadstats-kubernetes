@@ -58,5 +58,26 @@ spec:
           initialDelaySeconds: 10
         ports:
         - containerPort: 8000
+        env:
+          - name: DATABASE_URL
+            valueFrom:
+            secretKeyRef:
+              name: db-prod
+              key: connectionString
+          - name: JWT_SECRET
+            valueFrom:
+            secretKeyRef:
+              name: jwt
+              key: secret
+          - name: CLIENT_ID
+            valueFrom:
+            secretKeyRef:
+              name: untappd-api
+              key: id
+          - name: CLIENT_SECRET
+            valueFrom:
+            secretKeyRef:
+              name: untappd-api
+              key: secret
       imagePullSecrets:
       - name: regcred
