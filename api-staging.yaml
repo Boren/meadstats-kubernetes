@@ -59,6 +59,10 @@ spec:
         ports:
         - containerPort: 8000
         env:
+          - name: FLASK_ENV
+            value: "production"
+          - name: APP_SETTINGS
+            value: "app.config.ProductionConfig"
           - name: DATABASE_URL
             valueFrom:
             secretKeyRef:
