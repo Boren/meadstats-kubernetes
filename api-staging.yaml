@@ -32,21 +32,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: meadstats-staging-api-deployment
+  name: meadstats-api-staging-deployment
   labels:
-    app: meadstats-staging-api
+    app: meadstats-api-staging
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: meadstats-staging-api
+      app: meadstats-api-staging
   template:
     metadata:
       labels:
-        app: meadstats-staging-api
+        app: meadstats-api-staging
     spec:
       containers:
-      - name: meadstats-staging-api
+      - name: meadstats-api-staging
         image: registry.bore.ai/meadstats-api:latest
         imagePullPolicy: Always
         livenessProbe:
