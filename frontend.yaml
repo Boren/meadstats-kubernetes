@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: meadstats
-        image: registry.bore.ai/meadstats-frontend:v1.1.0
+        image: registry.bore.ai/meadstats-frontend:v1.2.0
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
