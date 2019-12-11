@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
       - name: meadstats-api
-        image: registry.bore.ai/meadstats-api:latest
+        image: hovedbore/meadstats-api:latest
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -83,5 +83,3 @@ spec:
               secretKeyRef:
                 name: untappd-api
                 key: secret
-      imagePullSecrets:
-      - name: regcred
