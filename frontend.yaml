@@ -16,6 +16,7 @@ metadata:
   annotations:  
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
     nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
 spec:
   tls:
@@ -25,6 +26,12 @@ spec:
     secretName: meadstats-prod-cert
   rules:
     - host: www.meadstats.com
+      http:
+        paths:
+        - backend:
+            serviceName: meadstats
+            servicePort: 80
+    - host: meadstats.com
       http:
         paths:
         - backend:
