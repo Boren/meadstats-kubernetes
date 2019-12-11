@@ -21,6 +21,7 @@ metadata:
 spec:
   tls:
   - hosts:
+    - meadstats.com
     - www.meadstats.com
     secretName: meadstats-prod-cert
   rules:
