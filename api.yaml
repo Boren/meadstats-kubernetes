@@ -66,20 +66,20 @@ spec:
           - name: DATABASE_URL
             valueFrom:
               secretKeyRef:
-                name: db-prod
-                key: connectionString
+                name: api-secrets
+                key: db
           - name: JWT_SECRET
             valueFrom:
               secretKeyRef:
-                name: jwt
-                key: secret
+                name: api-secrets
+                key: jwt
           - name: CLIENT_ID
             valueFrom:
               secretKeyRef:
-                name: untappd-api
+                name: api-secrets
                 key: id
           - name: CLIENT_SECRET
             valueFrom:
               secretKeyRef:
-                name: untappd-api
+                name: api-secrets
                 key: secret
