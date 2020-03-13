@@ -45,7 +45,12 @@ metadata:
   labels:
     app: meadstats
 spec:
-  replicas: 1
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+       maxUnavailable: 25%
+       maxSurge: 1
   selector:
     matchLabels:
       app: meadstats
