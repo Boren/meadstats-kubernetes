@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: meadstats-staging
-        image: hovedbore/meadstats-frontend:latest
+        image: docker.pkg.github.com/boren/meadstats-frontend/meadstats-frontend:latest
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
