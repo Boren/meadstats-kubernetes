@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
       - name: meadstats
-        image: hovedbore/meadstats-frontend:1.8.0
+        image: hovedbore/meadstats-frontend:latest
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
